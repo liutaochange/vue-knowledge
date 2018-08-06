@@ -3,7 +3,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const config = {
   target: 'web',
   entry: {
-    app: ['babel-polyfill', path.resolve(__dirname, '../src/index.js')]
+    app: ['babel-polyfill', path.resolve(__dirname, '../client/index.js')]
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -15,7 +15,7 @@ const config = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [path.resolve(__dirname, '../src')],
+        include: [path.resolve(__dirname, '../client')],
         exclude: /node_modules/,
         options: {
           formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
